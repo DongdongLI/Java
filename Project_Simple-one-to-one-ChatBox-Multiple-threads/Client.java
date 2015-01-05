@@ -1,6 +1,6 @@
 import java.io.*;
 import java.net.*;
-public class GossipClient
+public class Client
 {
 	static Socket sock=null;
 	static BufferedReader receiveRead=null;
