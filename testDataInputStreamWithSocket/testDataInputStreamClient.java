@@ -20,6 +20,11 @@ public class testDataInputStreamClient {
 			dis=new DataInputStream(sock.getInputStream());
 			System.out.println(dis.readUTF());//it works
 			
+			dos=new DataOutputStream(sock.getOutputStream());
+			String str="I got it";
+			dos.writeUTF(str);//also works: so one socket can have multiple streams
+			dos.flush();
+			
 		} catch (UnknownHostException e) {
 			System.out.println("Unknown");
 			
