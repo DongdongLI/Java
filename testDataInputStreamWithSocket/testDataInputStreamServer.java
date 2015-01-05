@@ -24,6 +24,9 @@ public class testDataInputStreamServer {
 			dos.writeUTF(str);//it works
 			dos.flush();
 			
+			dis=new DataInputStream(sock.getInputStream());
+			System.out.println(dis.readUTF());//works
+			
 		} catch (IOException e) {
 			System.out.println("can not start...");
 		}
@@ -35,4 +38,4 @@ public class testDataInputStreamServer {
 	}
 }
 //It can now send a String to the client
-//future work: readsomething
+//future work: readsomething; thread
